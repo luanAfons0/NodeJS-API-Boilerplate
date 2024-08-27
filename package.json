@@ -10,7 +10,7 @@
         "eslint": "eslint --fix"
     },
     "keywords": [],
-    "author": "",
+    "author": "Luan Afonso",
     "license": "ISC",
     "description": "",
     "dependencies": {
