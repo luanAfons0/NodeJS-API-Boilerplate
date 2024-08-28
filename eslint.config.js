@@ -1,10 +1,15 @@
-const standard = require('eslint-config-standard')
+import globals from 'globals'
+import pluginJs from '@eslint/js'
 
-module.exports = [
-    standard,
+export default [
+    { languageOptions: { globals: globals.browser } },
+    pluginJs.configs.recommended,
     {
-        // Your overrides here
-        extends: ['prettier'],
-        ignores: ['**/node_modules/*'],
+        rules: {
+            'no-unused-vars': 'error',
+            'no-undef': 'warn',
+            'semi': 'off',
+            'prefer-const': 'warn',
+        },
     },
 ]
