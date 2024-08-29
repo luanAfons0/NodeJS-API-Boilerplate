@@ -8,7 +8,7 @@ export default [
         rules: {
             'no-unused-vars': 'error',
             'no-undef': 'warn',
-            'semi': 'off',
+            semi: 'off',
             'prefer-const': 'warn',
         },
     },

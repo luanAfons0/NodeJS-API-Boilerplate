@@ -7,7 +7,7 @@
         "dev": "nodemon app.js",
         "test": "echo \"Error: no test specified\" && exit 1",
         "prettier": "prettier --write \"./**/*.{js,ts,json}\"",
-        "lint": "eslint **/*.js --ignore-pattern node_modules/"
+        "lint": "eslint \"**/*.js\""
     },
     "keywords": [],
     "author": "Luan Afonso",
@@ -16,6 +16,7 @@
     "dependencies": {
         "dotenv": "^16.4.5",
         "express": "^4.19.2",
+        "morgan": "^1.10.0",
         "prettier": "^3.3.3"
     },
     "devDependencies": {
