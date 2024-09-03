@@ -5,9 +5,9 @@
     "type": "module",
     "scripts": {
         "dev": "nodemon app.js",
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "prettier": "prettier --write \"./**/*.{js,ts,json}\"",
-        "lint": "eslint \"**/*.js\""
+        "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --passWithNoTests",
+        "prettier": "prettier --write \"./**/*.{js,ts,json,mjs}\"",
+        "lint": "eslint . --ignore-pattern \"tests/*\" \"**/*.js\""
     },
     "keywords": [],
     "author": "Luan Afonso",
@@ -16,11 +16,14 @@
     "dependencies": {
         "dotenv": "^16.4.5",
         "express": "^4.19.2",
+        "jest": "^29.7.0",
         "morgan": "^1.10.0",
-        "prettier": "^3.3.3"
+        "prettier": "^3.3.3",
+        "supertest": "^7.0.0"
     },
     "devDependencies": {
         "@eslint/js": "^9.9.1",
+        "cross-env": "^7.0.3",
         "eslint": "^8.57.0",
         "eslint-config-prettier": "^9.1.0",
         "eslint-config-standard": "^17.1.0",
